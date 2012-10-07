@@ -21,23 +21,13 @@ function searchback()
 }
 
 //binding the wine details
-$('#WineDetailsPage').live('pageshow', function(event) { //or 'pagecreate'
 
-    // get query string part of url into its own variable
-    //var url = window.location.href;
-    var url=unescape(document.location.href);
-    alert(url);
-    var query_string = url.split("?");
-
-    //alert(query_string);
-
-    // make array of all name/value pairs in query string
-    var firstparams = query_string[1].split("=");
-    //alert(firstparams);
-
-    var secondparam = firstparams[1];
-    //alert(secondparam);
-    getWinesdetails(secondparam);
+$('.SelectedWine li a').live('vclick', function(event) {
+    event.preventDefault();
+    //alert("i'm running!");
+    var selectedId = $(this).text();
+    //alert(selectedId);
+    getWinesdetails(selectedId)
 });
 
 var track_id = '';      // Name of the wine
@@ -45,16 +35,23 @@ var tracking_data = []; // Array containing wine objects objects
 var tracking_data1='';
 var wines='';
 function getWinesdetails(secondparam) {
-    //alert("enter Winesdetails");
-
+  //alert("enter Winesdetails");
+var query_string = secondparam.split(":");
+var secondparam = query_string[1];
+//alert("before"+secondparam);
+secondparam = secondparam.replace(/\"/g,'\:');
+var newstring = secondparam.split(":");
+//alert("after"+newstring[1]);
     //Get the records from JSON file
     jQuery.getJSON("js/winecurrent.json", function(data) {
     
         $('#WinesDetails li').remove();
         wines = data.rows;
-        $.each(wines, function(index, wine) {
-            alert("enter2");
-        if (wine.winename == secondparam) {
+        $.each(wines, function(index, wine) {   
+         //alert(wine.winename); 
+        // alert('"'+wine.winename+'"' +"="+secondparam)       
+        if (wine.winename == newstring[1]) {
+        // alert("enter2");
                 $('#WinesDetails').append('<li><span style="color:#336699">Wine Name</span> : ' + wine.winename + '<Br />' +
                 '<span style="color:#336699">Price</span> : ' + wine.price + '<Br />' +
                 '<span style="color:#336699">Region </span>: ' + wine.region + '<Br />' +
@@ -92,10 +89,8 @@ function getWinesdetails(secondparam) {
                //alert(track_id);
                //alert(tracking_data);
                
-            }
-            
-            //tracking_data=WinesDetails.val();
-            
+            }                       
+            //tracking_data=WinesDetails.val();           
 
         });
         $('#WinesDetails').listview('refresh');

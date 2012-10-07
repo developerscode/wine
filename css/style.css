@@ -10,7 +10,7 @@ html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
 ::-moz-selection { background: black; background: rgba(0, 0, 0, 0.5); color: #fff; text-shadow: none; }
-::selection { background: black; background: rgba(0, 0, 0, 0.5); color: #fff; text-shadow: none; }
+::selection { background: black; background: rgba(0, 0, 0, 0.5); color: #000; text-shadow: none; }
 
 a { color: #00e; }
 a:visited { color: #551a8b; }
@@ -357,4 +357,7 @@ div#content.demo > p + pre {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
+}
+div#container > ul > li {
+  color:#000 !important;
 }
