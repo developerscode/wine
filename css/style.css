@@ -67,9 +67,12 @@ td { vertical-align: top; }
 
 .ui-btn-up-c 
 {
-	 background-color:Black;
+	 background-color:#2D3743;
 }
-
+.ui-radio
+{
+	display:inline-block;
+}
 /* Author */
 
 @font-face {
@@ -130,7 +133,7 @@ div#header > iframe {
 /* put +1 button on a diet 
 #___plusone_0{ width:65px !important; }*/
 
-div#main {
+div#totallists {
   background: #2D3743 url(../img/bg-main.png) repeat 0 0;
   border-top: 1px solid #DDD;
   box-shadow: inset white 0 1px, inset rgba(0, 0, 0, 0.5) 0 0 25px;
@@ -143,7 +146,7 @@ div#content {
   color: white;
   text-shadow: black 0 -1px;
   text-shadow: rgba(0, 0, 0, 0.7) 0 -1px;
-  font-size: 80%;
+  font-size: 15px;
   min-height: 1000px;
 }
 
@@ -363,4 +366,9 @@ div#content.demo > p + pre {
 }
 div#container > ul > li {
   color:#000 !important;
+}
+
+.ui-radio
+{
+	width:50px;
 }

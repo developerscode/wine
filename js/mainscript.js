@@ -20,13 +20,38 @@ function searchback()
     $.mobile.changePage("Search.html", { transition: "slideup" });
 }
 
-//binding the wine details
 
+// bind all wines
+//$('#totallists').live('pageshow', function(){
+//$('#container').children().remove('li');
+//    jQuery.getJSON("js/winecurrent.json", function(data) {
+//    
+//        $('#container li').remove();
+//        wines = data.rows;
+//        $.each(wines, function(index, wine) {   
+//     
+//        
+//                $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: ' + wine.winename + '</span><Br />' +
+//                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+//                
+//                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+//                
+//                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+//                '</a></li>');   
+//                                
+//        });
+//        $('#container').listview('refresh');
+//    });
+//	
+//});
+
+
+//binding the wine details
 $('.SelectedWine li a').live('vclick', function(event) {
     event.preventDefault();
     //alert("i'm running!");
     var selectedId = $(this).text();
-    //alert(selectedId);
+   // alert(selectedId);
     getWinesdetails(selectedId)
 });
 
@@ -35,7 +60,7 @@ var tracking_data = []; // Array containing wine objects objects
 var tracking_data1='';
 var wines='';
 function getWinesdetails(secondparam) {
-  //alert("enter Winesdetails");
+ // alert("enter Winesdetails");
 var query_string = secondparam.split(":");
 var secondparam = query_string[1];
 //alert("before"+secondparam);
@@ -165,3 +190,221 @@ $('#track_info').live('pageshow', function(){
 	// Display total distance and time
 	$("#track_info_info").html(total_km);
 });
+
+//Bind cost to listview using radio selection
+
+var MinimumcostValue = 10;
+
+function handleClick(cost) { 
+ 
+    MinimumcostValue = cost.value;
+    
+    if(MinimumcostValue==10){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#WinesDetails li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.price <= 10) {
+        
+                $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>');   
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+    }
+    else if(MinimumcostValue==1015){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#WinesDetails li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.price >= 10 && wine.price<=15) {
+        
+                 $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>'); 
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+}
+else if(MinimumcostValue==1520){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#WinesDetails li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.price >= 15 && wine.price<=20) {
+        
+                 $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>'); 
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+}
+else if(MinimumcostValue==2025){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#WinesDetails li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.price >= 20 && wine.price<=25) {
+        
+                  $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>');  
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+}
+else if(MinimumcostValue==2530){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#WinesDetails li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.price >= 25 && wine.price<=30) {
+        
+                   $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>'); 
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+}
+}
+
+//Bind ratings to listview using radio selection
+
+var MinimumratingValue = 35;
+
+function handleRClick(ratings) { 
+ 
+    MinimumratingValue = ratings.value;
+    
+    if(MinimumratingValue==35){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#container li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.reviewstars == 3.5) {
+        
+                    $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>'); 
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+    }
+    else if(MinimumratingValue==4){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#container li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.reviewstars ==4) {
+        
+                   $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>'); 
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+}
+else if(MinimumratingValue==45){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#container li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.reviewstars == 4.5) {
+        
+                  $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>'); 
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+}
+else if(MinimumratingValue==5){
+    $('#container').children().remove('li');
+    jQuery.getJSON("js/winecurrent.json", function(data) {
+    
+        $('#container li').remove();
+        wines = data.rows;
+        $.each(wines, function(index, wine) {   
+             
+        if (wine.reviewstars ==5) {
+        
+                 $('#container').append('<li data-varietal="Riesling"><a href="#WineDetailsPage" style="text-decoration:none;"><span style="font-size:small; font-family:Verdana; color:White;">Wine Name: "' + wine.winename + '"</span></a><Br />' +
+                '<span style="font-size:small; font-family:Verdana; color:White;">Price : ' + wine.price + '</span><Br />' +
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Stars : ' + wine.reviewstars + '</span><Br />' +               
+                
+                '<span style="font-size:small; font-family:Verdana; color:White;">Review Text: ' + wine.reviewtext + '</span><Br />' +                
+                '</li>'); 
+            }                       
+        });
+        $('#container').listview('refresh');
+    });
+}
+}

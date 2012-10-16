@@ -40,6 +40,7 @@ ul.ft-menu > li.ft-field {
 
 ul.ft-menu > li.ft-field > span.ft-label { 
     cursor: pointer; 
+    font-size: 18px;
 }
 ul.ft-menu > li.ft-field > span.ft-label:before { 
     font-family: "FiltrifyRegular"; 
