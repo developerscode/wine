@@ -19,10 +19,6 @@
 <link rel="stylesheet" href="css/sunburst.css" type="text/css" />
 <link rel="stylesheet" href="css/filtrify.css" type="text/css" />
 <script type="text/javascript">
-
-</script>
-
-<script type="text/javascript">
 $(function() {
 
 	$.filtrify("container", "placeHolder", {
@@ -63,7 +59,6 @@ $(function() {
 });
 
 </script>
-
 </head>
 <body id="mainbody">
 
@@ -81,18 +76,20 @@ $(function() {
 <td colspan="2" align="left">Cost :</td></tr>
 <tr>
 <td>
-<input type="radio" name="cost" value="10" checked="checked" onclick="handleClick(this);"/>$10</td> <td><input type="radio" name="cost" value="1015" onclick="handleClick(this);"/>$10 - $15&nbsp&nbsp</td></tr>
+<input type="radio" name="cost" value="10" checked="checked" onclick="handleClick(this);"/>$10</td></tr>
+<tr> <td><input type="radio" name="cost" value="1015" onclick="handleClick(this);"/>$10 - $15</td></tr>
 <tr><td>
-<input type="radio" name="cost" value="1520" onclick="handleClick(this);" />$15 - $20</td><td><input type="radio" name="cost" value="2025" onclick="handleClick(this);"/>$20 - $25&nbsp&nbsp</td></tr>
-<tr><td colspan="2" align="left"><input type="radio" name="cost" value="2530" onclick="handleClick(this);"/>$25-$30
+<input type="radio" name="cost" value="1520" onclick="handleClick(this);" />$15 - $20</td></tr>
+<tr><td><input type="radio" name="cost" value="2025" onclick="handleClick(this);"/>$20 - $25</td></tr>
+<tr><td align="left"><input type="radio" name="cost" value="2530" onclick="handleClick(this);"/>$25-$30
 </td>
 </tr>
 <tr><td  height="10px;"></td></tr>
 <tr>
 <td>Ratings : </td></tr>
 <tr>
-<td><input type="radio" name="ratings" value="35" checked="checked" onclick="handleRClick(this);"/>3.5&nbsp&nbsp<input type="radio" name="ratings" value="4" onclick="handleRClick(this);"/>4&nbsp&nbsp
-<input type="radio" name="ratings" value="45" onclick="handleRClick(this);"/>4.5&nbsp&nbsp<input type="radio" name="ratings" value="5" onclick="handleRClick(this);"/>5</td>
+<td><input type="radio" name="ratings" value="35" checked="checked" onclick="handleRClick(this);"/>3.5&nbsp&nbsp<input type="radio" name="ratings" value="4" onclick="handleRClick(this);"/>4</td></tr>
+<tr><td><input type="radio" name="ratings" value="45" onclick="handleRClick(this);"/>4.5&nbsp&nbsp<input type="radio" name="ratings" value="5" onclick="handleRClick(this);"/>5</td>
 </tr>
 </table>
 </div>
