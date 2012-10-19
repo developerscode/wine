@@ -110,7 +110,7 @@ ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected {
 	background: #F5F3EE;
 }
 ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li {
-	font-size: 10px;
+	font-size: 20px;
 	display: inline-block;
 	*display: inline; 
 	*zoom: 1;

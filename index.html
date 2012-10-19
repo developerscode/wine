@@ -66,7 +66,7 @@ $(function() {
 <!--<div data-role="content">-->
 <div id="content">
 <h1> Search Reviews</h1>
-<div id="placeHolder"></div>
+<div id="placeHolder" style=" margin-left:20%; margin-right:20%;"></div>
 <div id="legend"></div>
 <form action="" id="winereviewsform">
 
@@ -95,7 +95,7 @@ $(function() {
 </div>
  </form>
 <br />
-<ul id="container" data-role="listview" data-filter='true' data-inset='false' class="SelectedWine">
+<ul id="container" data-role="listview" data-filter='true' data-inset='false' class="SelectedWine" data-theme="c">
     
     <li data-varietal="Riesling"> <span style="font-size:medium; font-family:Verdana; color:White;"><a href="#WineDetailsPage" style=" color:White; text-decoration:none;">WineName: "Grand Cru Florimont"</a></span><br/><span style="font-size:small; font-family:Verdana; color:White;">Price:"21.55"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Reviewstars : "3.5"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Foodpairing : "Main"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Reviewtext : "Perfumed aromas of exotic spice introduce a persistent off-dry stream of ripe fruit flavour moderated by a wonderful sweet and tang aftertaste. This is medium bodied with a generous mouth feel. Sweet pear, apple and spice mingle with lemony citrus on the palate while the mid-length finish layers on yellow plum and a refreshing dollop of key lime showcasing that magical yin and yang that pairs so well with spicy Asian dishes like pad Thai."</span></li>
     <li data-varietal="Pinot Gris"> <span style="font-size:medium; font-family:Verdana; color:White;"><a href="#WineDetailsPage" style=" color:White; text-decoration:none;">WineName: "Hatschbourg"</a></span><br/><span style="font-size:small; font-family:Verdana; color:White;">Price:"19.95"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Reviewstars : "4"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Foodpairing : "Main"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Reviewtext : "Delicious and reliably well-crafted, this Alsatian gem is weighty, rich and layered. Honeyed stone fruit, honeydew melon and sweet citrus are dressed with soft floral and autumnal notes. Fine acidity underlines the sweet ripe fruit, spicy nutty notes lasting through the flavourful finish. A match for spicy sausage, this off-dry wine can be enjoyed for several more years."</span></li>
@@ -203,8 +203,7 @@ $(function() {
             <h3>
                 Wine Details :
             </h3>
-            <ul id="WinesDetails" data-role="listview" data-theme="c" data-inset='true' data-inline='false'
-                data-divider-theme="d">
+            <ul id="WinesDetails" data-role="listview" data-inset='true' data-inline='false' data-theme="c" data-divider-theme="d">
             </ul>
             <div id="track_id">
             </div>
