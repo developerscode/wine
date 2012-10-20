@@ -9,7 +9,7 @@
 <script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.js" type="text/javascript"></script>
 <script src="js/mainscript.js" type="text/javascript"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>-->
 <script src="js/highlight.pack.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script src="js/filtrify.min.js" type="text/javascript"></script>
@@ -93,7 +93,6 @@ $(function() {
 </tr>
 </table>
 </div>
- </form>
 <br />
 <ul id="container" data-role="listview" data-filter='true' data-inset='false' class="SelectedWine" data-theme="c">
     
@@ -186,9 +185,11 @@ $(function() {
     <li data-varietal="Cabernet Franc"> <span style="font-size:medium; font-family:Verdana; color:White;"><a href="#WineDetailsPage" style=" color:White; text-decoration:none;">WineName: "null"</a></span><br/><span style="font-size:small; font-family:Verdana; color:White;">Price:"29.95"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Reviewstars : "4.5"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Foodpairing : "null"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Reviewtext : "The aromas of this opulent ice wine captivates candied fruit and sweet floral notes juxtaposed with elusive herbal, vegetal aromas. Luscious in texture, like satin across the palate, the exquisite balance of sweet and tang brings mouth-watering crispness to balance the sumptuous honeyed, red fruit. Sip and savour on its own, or if you must, serve with a cranberry pecan tart. Order by the case for home or office delivery from Tawse."</span></li>
     <li data-varietal="Riesling"> <span style="font-size:medium; font-family:Verdana; color:White;"><a href="#WineDetailsPage" style=" color:White; text-decoration:none;">WineName: "Wismer Vineyard Lakeview Block"</a></span><br/><span style="font-size:small; font-family:Verdana; color:White;">Price:"24.95"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Reviewstars : "4"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Foodpairing : "null"</span><br /><span style="font-size:small; font-family:Verdana; color:White;">Reviewtext : "Transparent yellow-green, high-toned aromas of stone fruit and citrus mingle with floral and mineral nuances. Fruity, medium bodied, with a clean tangy texture and pleasing balance, there is considerable depth and breadth of fruit flavour, an appealing hint of residual sugar and great vitality and freshness on the finish. A model of subtlety and style, cellar medium term for further evolution. Order by the case for home or office delivery from Tawse."</span></li>
 </ul>       
-</div>
+
+ </form>
 </div>
 
+</div>
 <!--</div>-->
 
 <div data-role="page" id="WineDetailsPage">
@@ -203,7 +204,7 @@ $(function() {
             <h3>
                 Wine Details :
             </h3>
-            <ul id="WinesDetails" data-role="listview" data-inset='false' data-inline='false' data-theme="c">
+            <ul id="WinesDetails" data-role="listview" data-inset='false' data-inline='false'>
             </ul>
             <div id="track_id">
             </div>
