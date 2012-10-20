@@ -203,7 +203,7 @@ function handleClick(cost) {
     $('#container').children().remove('li');
     jQuery.getJSON("js/winecurrent.json", function(data) {
     
-        $('#WinesDetails li').remove();
+        $('#container li').remove();
         wines = data.rows;
         $.each(wines, function(index, wine) {   
              
@@ -225,7 +225,7 @@ function handleClick(cost) {
     $('#container').children().remove('li');
     jQuery.getJSON("js/winecurrent.json", function(data) {
     
-        $('#WinesDetails li').remove();
+        $('#container li').remove();
         wines = data.rows;
         $.each(wines, function(index, wine) {   
              
@@ -247,7 +247,7 @@ else if(MinimumcostValue==1520){
     $('#container').children().remove('li');
     jQuery.getJSON("js/winecurrent.json", function(data) {
     
-        $('#WinesDetails li').remove();
+        $('#container li').remove();
         wines = data.rows;
         $.each(wines, function(index, wine) {   
              
@@ -269,7 +269,7 @@ else if(MinimumcostValue==2025){
     $('#container').children().remove('li');
     jQuery.getJSON("js/winecurrent.json", function(data) {
     
-        $('#WinesDetails li').remove();
+        $('#container li').remove();
         wines = data.rows;
         $.each(wines, function(index, wine) {   
              
@@ -291,7 +291,7 @@ else if(MinimumcostValue==2530){
     $('#container').children().remove('li');
     jQuery.getJSON("js/winecurrent.json", function(data) {
     
-        $('#WinesDetails li').remove();
+        $('#container li').remove();
         wines = data.rows;
         $.each(wines, function(index, wine) {   
              
