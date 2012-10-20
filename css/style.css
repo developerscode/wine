@@ -69,6 +69,10 @@ td { vertical-align: top; }
 {
 	 background-color:#2D3743;
 }
+#WineDetailsPage .ui-btn-up-c 
+{
+	 background-color:#FFF;
+}
 .ui-radio
 {
 	display:inline-block;
@@ -371,4 +375,8 @@ div#container > ul > li {
 .ui-radio
 {
 	width:50px;
+}
+.ui-btn-text 
+{
+	background:#2D3743 url(../img/bg-main.png) repeat 0 0 !important;
 }
